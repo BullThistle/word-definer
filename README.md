@@ -4,7 +4,7 @@
 
 ## Description
 
-_A Ruby Project_
+_A web app that has the user input a word with its definition and stores it_
 
 ## Setup/Installation Requirements
 
