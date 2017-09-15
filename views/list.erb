@@ -1,15 +1,17 @@
 <h1>Words</h1>
 
 <% @list.each do |word| %>
-  <h4><a href="/words/<%= word.id %>"><%= word.word %></a></h4>
+  <h4><a href="/word/<%= word.id %>"><%= word.word %></a></h4>
 <% end %>
 
 <h4>Add an item to the list:</h4>
 
 <form action="/" method="post">
   <div class="form-group">
-    <label for="name">Word</label>
+    <label>Word</label>
     <input id="word" type="text" name="word" class="form-control">
+    <label>Definition</label>
+    <input id="definition" type="text" name="definition" class="form-control">
   </div>
   <button type="submit" class="btn">Submit</button>
 </form>

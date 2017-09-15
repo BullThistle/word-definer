@@ -10,13 +10,14 @@ end
 
 post '/' do
     word_in = params['word']
-    word = Word.new(word_in)
+    definition = params['definition']
+    word = Word.new(word_in, definition)
     word.save
     @list = Word.list
     erb :list
 end
 
-get('/words/:id') do
+get '/word/:id' do
     @word = Word.find(params[:id])
     erb :word
 end
