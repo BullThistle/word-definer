@@ -10,4 +10,13 @@ describe('Words list', {:type => :feature}) do
       click_button('Submit')
       expect(page).to have_content("foo")
     end
+
+    it 'clicks link to see word page' do
+        visit('/')
+        fill_in('word', :with => "apple")
+        click_button('Submit')
+        click_link('apple')
+        expect(page).to have_content("apple")
+        expect(page).to have_content("Back to list")
+      end
 end
