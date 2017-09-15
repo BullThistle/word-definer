@@ -1,3 +1,0 @@
-class Word-definer
-    
-end
