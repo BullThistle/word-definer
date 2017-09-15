@@ -23,4 +23,6 @@ describe 'Word' do
             expect(Word.list).to(eq([]))
         end
     end
+
+    
 end
