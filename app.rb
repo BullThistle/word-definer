@@ -16,3 +16,7 @@ post '/' do
     erb :list
 end
 
+get('/items/:id') do
+    @word = Word.find(params[:id])
+    erb(:item)
+end

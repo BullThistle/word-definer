@@ -24,5 +24,14 @@ describe 'Word' do
         end
     end
 
-    
+    describe '.find' do
+        it "finds a word based on its id" do
+            word1 = Word.new("foo")
+            word1.save
+            word2 = Word.new("bar")
+            word2.save
+            expect(Word.find(1)).to(eq(word1))
+            expect(Word.find(2)).to(eq(word2))
+        end
+    end
 end

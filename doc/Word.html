@@ -119,6 +119,35 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#id-instance_method" title="#id (instance method)">#<strong>id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute id.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#word-instance_method" title="#word (instance method)">#<strong>word</strong>  &#x21d2; Object </a>
     
 
@@ -289,15 +318,17 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/word.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/word.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span>
     <span class='ivar'>@word</span> <span class='op'>=</span> <span class='id identifier rubyid_word'>word</span>
+    <span class='ivar'>@id</span> <span class='op'>=</span> <span class='cvar'>@@list</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>+</span> <span class='int'>1</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -310,9 +341,52 @@
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="word=-instance_method"></span>
+      <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="word-instance_method">
+  <h3 class="signature first" id="id-instance_method">
+  
+    #<strong>id</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/word.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
+  <span class='ivar'>@id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="word=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="word-instance_method">
   
     #<strong>word</strong>  &#x21d2; <tt>Object</tt> 
   
@@ -337,12 +411,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/word.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/word.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_word'>word</span>
   <span class='ivar'>@word</span>
@@ -374,12 +448,12 @@
       <pre class="lines">
 
 
-17
-18
-19</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/word.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/word.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_empty'>empty</span>
     <span class='cvar'>@@list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -404,12 +478,12 @@
       <pre class="lines">
 
 
-13
-14
-15</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/word.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/word.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
     <span class='cvar'>@@list</span>
@@ -440,12 +514,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/word.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/word.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span>
     <span class='cvar'>@@list</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -460,7 +534,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Sep 15 11:27:32 2017 by
+  Generated on Fri Sep 15 11:55:39 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.1).
 </div>
