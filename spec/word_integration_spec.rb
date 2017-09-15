@@ -30,4 +30,15 @@ describe 'Words list', {:type => :feature} do
         expect(page).to have_content "A yellow fruit."
     end
 
+    it 'enters in a duplicate word' do
+        visit '/'
+        fill_in 'word', :with => "orange"
+        fill_in 'definition', :with => "An orange fruit."
+        click_button 'Submit'
+        fill_in 'word', :with => "orange"
+        fill_in 'definition', :with => "A round orange fruit."
+        click_button 'Submit'
+        expect(page).to have_content "This is a duplicate word"
+    end
+
 end
