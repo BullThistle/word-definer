@@ -2,6 +2,11 @@ require 'rspec'
 require 'word'
 
 describe 'Word' do
+    
+    before do
+        Word.empty
+    end
+
     describe '.list' do
         it "starts empty" do
             expect(Word.list()).to(eq([]))

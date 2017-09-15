@@ -16,7 +16,7 @@ post '/' do
     erb :list
 end
 
-get('/items/:id') do
+get('/words/:id') do
     @word = Word.find(params[:id])
-    erb(:item)
+    erb :word
 end
