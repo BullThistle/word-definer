@@ -14,4 +14,13 @@ describe 'Word' do
             expect(Word.list()).to(eq([word1, word2]))
         end
     end
+
+    describe '.empty' do
+        it "empties the word list" do
+            word = Word.new("foo")
+            word.save
+            Word.empty
+            expect(Word.list).to(eq([]))
+        end
+    end
 end
